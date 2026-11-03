@@ -16,3 +16,11 @@ test('Verify successful login', async ({ page }) => {
         .toHaveText('Secure Area');
 
 });
+
+test('Verify Login Page Title', async ({ page }) => {
+
+    await page.goto('https://the-internet.herokuapp.com/login');
+
+    await expect(page).toHaveTitle('The Internet');
+
+});
